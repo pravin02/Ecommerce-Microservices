@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: zuul-api-gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka
+      instance:
+        preferedIpAddress: true
+
+zuul:
+  ignoredServices: '*'
+  routes:
+    prefix: /api
+    product-catalog-service:
+      path: /catalog/**
+      serviceId: product-catalog-service
+      stripPrefix: false
+    products-service:
+      path: /products/**
+      serviceId: products-service
+      stripPrefix: false
