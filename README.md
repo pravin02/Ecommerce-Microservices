@@ -46,7 +46,7 @@
     1) go to each project folder open terminal and hit ./gradlew build
 
 ## Digram:
-![alt text](https://github.com/pravin02/Ecommerce-Microservices/blob/master/Eommerce_Microservice_architecture.png)
+![alt text](https://github.com/pravin02/Ecommerce-Microservices/blob/main/Eommerce_Microservice_architecture.png)
 
 ## Endpoints to Expose:
 1) localhost:8080/catalog
