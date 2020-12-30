@@ -1,4 +1,4 @@
-# This is simplest ecommerce demo using Microservices archetecture
+# This is simplest ecommerce demo using Microservices architecture
 
 ## Prerequisite:
     1) Java 8
@@ -45,6 +45,8 @@
 ## How to run:
     1) go to each project folder open terminal and hit ./gradlew build
 
+## Digram:
+![alt text](https://github.com/pravin02/Ecommerce-Microservices/blob/master/Eommerce_Microservice_architecture.png)
 
 ## Endpoints to Expose:
 1) localhost:8080/catalog
