@@ -4,23 +4,37 @@ server:
 spring:
   application:
     name: zuul-api-gateway
-
 eureka:
   client:
     serviceUrl:
+      registryFetchIntervalSeconds: 5
       defaultZone: http://localhost:8082/eureka
       instance:
         preferedIpAddress: true
 
+
 zuul:
   ignoredServices: '*'
+  host:
+    maxTotalConnections: 1000
+    maxPerRouteConnections: 1000
+  prefix: /api
   routes:
-    prefix: /api
     product-catalog-service:
       path: /catalog/**
+      sensitiveHeaders: null
       serviceId: product-catalog-service
       stripPrefix: false
     products-service:
       path: /products/**
+      sensitiveHeaders: null
       serviceId: products-service
       stripPrefix: false
+
+## Configuring info endpoint
+info:
+  java-vendor: ${java.specification.vendor}
+  app: zuul-api-gateway
+  name: Spring Zuul ApI Gateway Service Application
+  description: This is my first spring boot application microservice
+  version: 1.0.0
