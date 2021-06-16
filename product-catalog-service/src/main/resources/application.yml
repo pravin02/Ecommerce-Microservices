@@ -17,3 +17,9 @@ management:
     web:
       exposure:
         include: '*'
+## Configuring info endpoint
+info:
+  app: product-catalog-service
+  name: Spring Product Catalog Service Application
+  description: This is my first spring boot application microservice
+  version: 1.0.0
