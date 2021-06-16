@@ -17,3 +17,9 @@ management:
     web:
       exposure:
         include: '*'
+## Configuring info endpoint
+info:
+  app: products-service
+  name: Spring Products Service Application
+  description: This is my first spring boot application microservice
+  version: ${version}
