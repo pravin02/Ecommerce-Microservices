@@ -7,6 +7,7 @@
     4) Eureka Config Server
     5) Eureka Config Client
     6) Zuul Api Gateway
+	7) Discovery Server
 
 # Modules:
     1) Zuul Api Gateway - zuul-api-gateway
@@ -49,7 +50,10 @@
 ![alt text](https://github.com/pravin02/Ecommerce-Microservices/blob/main/Eommerce_Microservice_architecture.png)
 
 ## Endpoints to Expose:
-1) localhost:8080/catalog
-2) localhost:8080/catalog/list
-3) localhost:8080/products
-4) localhost:8080/products/list
+1) localhost:8080/api/catalog
+2) localhost:8080/api/catalog/list
+3) localhost:8080/api/products
+4) localhost:8080/api/products/list
+
+## Endpoints to Expose:
+Spring boot admin to monitor app services can be accessible using http://localhost:8081/applications
