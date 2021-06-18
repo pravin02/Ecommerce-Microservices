@@ -9,10 +9,11 @@ eureka:
   instance:
     hostname: localhost
   client:
+    enabled: true
     registerWithEureka: true
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:8082/eureka
+      defaultZone: http://localhost:8082/eureka/
       instance:
         preferedIpAddress: true
 
@@ -21,10 +22,9 @@ management:
     web:
       exposure:
         include: '*'
+
 ## Configuring info endpoint
 info:
-  java-vendor: ${java.specification.vendor}
-  app: eureka-service-registry
-  name: Spring Eureka server Service Application
-  description: This is my first spring boot application microservice
+  appName: ${spring.application.name}
+  description: Eureka server for ecommrce application
   version: 1.0.0
