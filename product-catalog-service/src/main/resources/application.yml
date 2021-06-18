@@ -4,11 +4,25 @@ server:
 spring:
   application:
     name: product-catalog-service
-
+---
+spring:
+  jpa:
+    showSql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ecommerce
+    username: root
+    password: root
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
 eureka:
   client:
+    enabled: true
     serviceUrl:
-      defaultZone: http://localhost:8082/eureka
+      defaultZone: http://localhost:8082/eureka/
       instance:
         preferedIpAddress: true
 
@@ -19,7 +33,6 @@ management:
         include: '*'
 ## Configuring info endpoint
 info:
-  app: product-catalog-service
-  name: Spring Product Catalog Service Application
-  description: This is my first spring boot application microservice
+  appName: ${spring.application.name}
+  description: Spring Product Catalog Service Application
   version: 1.0.0
