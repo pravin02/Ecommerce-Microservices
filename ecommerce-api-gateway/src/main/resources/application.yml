@@ -3,15 +3,18 @@ server:
 
 spring:
   application:
-    name: zuul-api-gateway
+    name: ecommerce-api-gateway
+
 eureka:
   client:
+    enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       registryFetchIntervalSeconds: 5
-      defaultZone: http://localhost:8082/eureka
+      defaultZone: http://localhost:8082/eureka/
       instance:
         preferedIpAddress: true
-
 
 zuul:
   ignoredServices: '*'
@@ -30,11 +33,14 @@ zuul:
       sensitiveHeaders: null
       serviceId: products-service
       stripPrefix: false
+    log-service:
+      path: /logs/**
+      sensitiveHeaders: null
+      serviceId: log-service
+      stripPrefix: false
 
 ## Configuring info endpoint
 info:
-  java-vendor: ${java.specification.vendor}
-  app: zuul-api-gateway
-  name: Spring Zuul ApI Gateway Service Application
-  description: This is my first spring boot application microservice
+  appName: ${spring.application.name}
+  description: API Gateway for ecommerce application
   version: 1.0.0
