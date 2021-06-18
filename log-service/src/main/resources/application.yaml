@@ -1,0 +1,37 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: log-service
+  jpa:
+    showSql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ecommerce
+    username: root
+    password: root
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/
+      instance:
+        preferedIpAddress: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+## Configuring info endpoint
+info:
+  appName: ${spring.application.name}
+  description: Log service to store logs in database which would be receive from any service
+  version: 1.0.0
