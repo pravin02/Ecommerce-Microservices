@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8888
 
 spring:
   application:
@@ -9,14 +9,21 @@ spring:
 spring:
   cloud:
     config:
-      uri: https://github.com/pravin02/Ecommerce-Microservices/config-props
       server:
-        bootstrap: true
+        git:
+          uri: https://github.com/pravin02/ecommerce-config-props.git
+          username:
+          password:
+          defaultLabel: main
+          cloneOnStart: true
+          skipSslValidation: true
+          refreshRate: 10800
+
 eureka:
   client:
     enabled: true
     serviceUrl:
-      defaultZone: http://localhost:8082/eureka/
+      defaultZone: http://localhost:8081/eureka/
     instance:
       preferedIpAddress: true
 
@@ -31,3 +38,4 @@ info:
   appName: ${spring.application.name}
   description: Products service to serve products list for ecommerce
   version: 1.0.0
+
