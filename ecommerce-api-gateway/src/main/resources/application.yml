@@ -12,7 +12,7 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       registryFetchIntervalSeconds: 5
-      defaultZone: http://localhost:8082/eureka/
+      defaultZone: http://localhost:8081/eureka/
       instance:
         preferedIpAddress: true
 
