@@ -31,7 +31,7 @@ dependencies {
     runtimeOnly 'mysql:mysql-connector-java:5.1.37'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-    // implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
 
     implementation 'de.codecentric:spring-boot-admin-starter-client'
 
