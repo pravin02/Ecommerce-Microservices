@@ -18,7 +18,7 @@ spring:
           cloneOnStart: true
           skipSslValidation: true
           refreshRate: 10800
-          searchPaths: ecommerce-config-store/{profile}/*
+          searchPaths: ecommerce-config-store/*
 
 eureka:
   client:
