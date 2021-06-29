@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/catalog")
 public class CatalogController {
 
-    @Value("${product-catalog.test.prop:pcs}")
+    @Value("${product-catalog.test.prop:Hello}")
     private String prop;
 
     private CatalogRepository repository;
