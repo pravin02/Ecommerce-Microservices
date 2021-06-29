@@ -1,0 +1,3 @@
+product-catalog:
+  test:
+    prop: Welcome to config server prop

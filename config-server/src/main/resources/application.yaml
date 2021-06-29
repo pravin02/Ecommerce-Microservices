@@ -11,17 +11,18 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/pravin02/ecommerce-config-props.git
+          uri: https://github.com/pravin02/Ecommerce-Microservices.git
           username:
           password:
           defaultLabel: main
           cloneOnStart: true
           skipSslValidation: true
           refreshRate: 10800
+          searchPaths: ecommerce-config-store/*
 
 eureka:
   client:
-    enabled: true
+    enabled: false
     serviceUrl:
       defaultZone: http://localhost:8081/eureka/
     instance:
