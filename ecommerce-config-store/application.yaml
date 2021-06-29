@@ -1,0 +1,3 @@
+product-catalog:
+  test:
+    prop: BOOTSTRAP Welcome to config server prop

@@ -19,15 +19,14 @@ public class CatalogController {
     @Value("${product-catalog.test.prop:Hello}")
     private String prop;
 
+    @Value("${test.message:Hello}")
+    private String message;
+
     private CatalogRepository repository;
 
     public CatalogController(CatalogRepository repository) {
         this.repository = repository;
-        log.info("Product catalog service trying to fetch prop from config server and value is " + prop);
     }
-
-    @Value("${test.message:Hello}")
-    private String message;
 
     @GetMapping
     public List<Catalog> getCatalog() {
@@ -37,5 +36,11 @@ public class CatalogController {
     @GetMapping("/props")
     public String getMessage() {
         return message;
+    }
+
+    @GetMapping("/props2")
+    public String getMessage2() {
+        log.info("Product catalog service trying to fetch prop from config server and value is " + this.prop);
+        return this.prop;
     }
 }

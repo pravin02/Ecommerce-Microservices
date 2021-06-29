@@ -1,0 +1,3 @@
+product-catalog:
+  test:
+    prop: INT Property Welcome to config server prop
