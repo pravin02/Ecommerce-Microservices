@@ -3,4 +3,4 @@ test:
     
 product-catalog:
   test:
-    prop: PRODUCT-CATALOG-SERVICE-LOCAL Property Welcome to config server prop update3
+    prop: PRODUCT-CATALOG-SERVICE-LOCAL Property Welcome to config server prop update5
