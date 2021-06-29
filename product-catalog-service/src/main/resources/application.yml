@@ -11,19 +11,19 @@ spring:
       uri: http://localhost:8888/
 
 ---
-spring:
-  jpa:
-    showSql: true
-    hibernate:
-      ddl-auto: update
-  datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ecommerce
-    username: root
-    password: root
-  properties:
-    hibernate:
-      dialect: org.hibernate.dialect.MySQLDialect
+#spring:
+  #jpa:
+    #showSql: true
+    #hibernate:
+      #ddl-auto: update
+  #datasource:
+    #driverClassName: com.mysql.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/ecommerce
+    #username: root
+    #password: root
+  #properties:
+    #hibernate:
+      #dialect: org.hibernate.dialect.MySQLDialect
 
 eureka:
   client:

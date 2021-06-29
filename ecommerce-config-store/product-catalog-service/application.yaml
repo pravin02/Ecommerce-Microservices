@@ -1,0 +1,18 @@
+product-catalog:
+  test:
+    prop: BOOTSTRAP Welcome to config server prop
+    
+    
+spring:
+  jpa:
+    showSql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ecommerce
+    username: root
+    password: root
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
