@@ -33,11 +33,12 @@ eureka:
       instance:
         preferedIpAddress: true
 
+# Spring Boot Actuator
 management:
   endpoints:
     web:
       exposure:
-        include: '*'
+        include: "*"
 ## Configuring info endpoint
 info:
   appName: ${spring.application.name}
