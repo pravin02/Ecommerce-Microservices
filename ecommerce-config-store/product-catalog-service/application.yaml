@@ -2,9 +2,6 @@ product-catalog:
   test:
     prop: APPLICATION Welcome to config server prop
     
-test:
-    message: From Application under project folder
-    
     
 spring:
   jpa:
