@@ -39,4 +39,3 @@ info:
   appName: ${spring.application.name}
   description: Products service to serve products list for ecommerce
   version: 1.0.0
-
