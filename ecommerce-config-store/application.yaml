@@ -1,6 +1,0 @@
-test:
-    message: From parent app yaml 1
-    
-product-catalog:
-  test:
-    prop: PRODUCT-CATALOG-SERVICE-LOCAL Property Welcome to config server prop update5
