@@ -4,19 +4,12 @@ server:
 spring:
   application:
     name: product-catalog-service
+  ##Config server is enabled
   cloud:
     config:
       failFast: true
       enabled: true
       uri: http://localhost:8888/
-
-eureka:
-  client:
-    enabled: true
-    serviceUrl:
-      defaultZone: http://localhost:8081/eureka/
-      instance:
-        preferedIpAddress: true
 
 ## Configuring info endpoint
 info:
