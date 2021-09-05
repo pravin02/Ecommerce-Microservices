@@ -1,46 +1,7 @@
-server:
-  port: 8084
-
-spring:
-  application:
-    name: product-catalog-service
-  cloud:
-    config:
-      failFast: true
-      enabled: true
-      uri: http://localhost:8888/
-
----
-#spring:
-  #jpa:
-    #showSql: true
-    #hibernate:
-      #ddl-auto: update
-  #datasource:
-    #driverClassName: com.mysql.jdbc.Driver
-    #url: jdbc:mysql://localhost:3306/ecommerce
-    #username: root
-    #password: root
-  #properties:
-    #hibernate:
-      #dialect: org.hibernate.dialect.MySQLDialect
-
-eureka:
-  client:
-    enabled: false
-    serviceUrl:
-      defaultZone: http://localhost:8081/eureka/
-      instance:
-        preferedIpAddress: true
-
+## for database properties have to connect with config server
 # Spring Boot Actuator
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-## Configuring info endpoint
-info:
-  appName: ${spring.application.name}
-  description: Spring Product Catalog Service Application
-  version: 1.0.0
