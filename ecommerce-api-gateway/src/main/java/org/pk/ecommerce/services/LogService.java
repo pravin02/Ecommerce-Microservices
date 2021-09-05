@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Service
-@FeignClient(name = "log-service", url = "http://localhost:8083/logs", configuration = CustomFeignClientConfiguration.class)
+@FeignClient(name = "log-service", url = "${log-service-url}", configuration = CustomFeignClientConfiguration.class)
 public interface LogService {
 
     @PostMapping
