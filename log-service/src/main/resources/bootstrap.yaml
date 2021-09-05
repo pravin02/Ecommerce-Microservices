@@ -4,18 +4,6 @@ server:
 spring:
   application:
     name: log-service
-  jpa:
-    showSql: true
-    hibernate:
-      ddl-auto: update
-  datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ecommerce
-    username: ${DB_USER}
-    password: ${DB_PASS}
-  properties:
-    hibernate:
-      dialect: org.hibernate.dialect.MySQLDialect
 eureka:
   client:
     enabled: true
@@ -23,12 +11,6 @@ eureka:
       defaultZone: http://localhost:8081/eureka/
       instance:
         preferedIpAddress: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
 
 ## Configuring info endpoint
 info:
