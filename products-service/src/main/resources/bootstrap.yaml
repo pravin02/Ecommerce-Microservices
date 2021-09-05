@@ -1,0 +1,14 @@
+server:
+  port: ${port:8085}
+
+spring:
+  application:
+    name: products-service
+  zipkin:
+    baseUrl: http://127.0.0.1:9411/
+
+## Configuring info endpoint
+info:
+  appName: ${spring.application.name}
+  description: Products service to serve products list for ecommerce
+  version: 1.0.0

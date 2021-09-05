@@ -40,7 +40,7 @@ public class ZuulPostFilter extends ZuulFilter {
         log.setDescription(request.getMethod() + " request sent to " + request.getRequestURL().toString());
         log.setMethod(request.getMethod());
         log.setType("Post");
-        logService.saveLogs(log);
+        //logService.saveLog(log);
 
         return null;
     }

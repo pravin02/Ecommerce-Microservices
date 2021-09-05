@@ -40,7 +40,7 @@ public class ZuulPreFilter extends ZuulFilter {
         log.setDescription(request.getMethod() + " request sent to " + request.getRequestURL().toString());
         log.setMethod(request.getMethod());
         log.setType("Pre");
-        logService.saveLogs(log);
+        //logService.saveLog(log);
 
         return null;
     }

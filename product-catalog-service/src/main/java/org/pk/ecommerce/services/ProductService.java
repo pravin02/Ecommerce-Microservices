@@ -2,15 +2,17 @@ package org.pk.ecommerce.services;
 
 
 import lombok.extern.log4j.Log4j2;
-import org.pk.ecommerce.model.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 @Log4j2
 @Service
-public class LogService {
+public class ProductService {
 
     @Autowired
     public WebClient.Builder webClient;
@@ -18,17 +20,18 @@ public class LogService {
     @Value("${protocol}")
     public String protocol;
 
-    @Value("${logService}")
+    @Value("${productService}")
     public String service;
 
-    public void saveLog(Log customLog) {
-        log.info(String.format("Custom Log %s", customLog));
-        webClient
+    public Mono<List> getProductsByCatalog(String catalog) {
+        return
+                webClient
                 .build()
-                .post()
-                .uri(String.format("%s://%s/logs", protocol, service))
-                .body(customLog, Log.class)
-
-        ;
+                .get()
+                .uri(String.format("%s://%s/products?catalog=%s", protocol, service, catalog))
+                .retrieve()
+                .bodyToMono(List.class)
+                .log()
+                ;
     }
 }

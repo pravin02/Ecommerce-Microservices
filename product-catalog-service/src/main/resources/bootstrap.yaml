@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: product-catalog-service
+  zipkin:
+    baseUrl:  http://127.0.0.1:9411/
 
 ## Configuring info endpoint
 info:

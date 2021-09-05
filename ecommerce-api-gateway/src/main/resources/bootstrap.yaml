@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: ecommerce-api-gateway
+  zipkin:
+    baseUrl: http://127.0.0.1:9411/
   boot:
     admin:
       client:

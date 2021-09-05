@@ -3,13 +3,8 @@
 ## for spring boot admin using config server
 
 ## config server referred for config server itself
-
-productService: products-service
-protocol: http
-
-# Spring Boot Actuator
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: '*'

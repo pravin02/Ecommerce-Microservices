@@ -40,7 +40,7 @@ public class ZuulRouteFilter extends ZuulFilter {
         log.setDescription(request.getMethod() + " request sent to " + request.getRequestURL().toString());
         log.setMethod(request.getMethod());
         log.setType("Route");
-        logService.saveLogs(log);
+        //logService.saveLog(log);
 
         return null;
     }

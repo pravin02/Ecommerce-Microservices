@@ -4,10 +4,10 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 
+import org.pk.ecommerce.services.LogService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.pk.ecommerce.model.Log;
-import org.pk.ecommerce.services.LogService;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +42,7 @@ public class ZuulErrorFilter extends ZuulFilter {
         log.setDescription(request.getMethod() + " request sent to " + request.getRequestURL().toString());
         log.setMethod(request.getMethod());
         log.setType("Error");
-        logService.saveLogs(log);
+        //logService.saveLog(log);
 
         return null;
     }

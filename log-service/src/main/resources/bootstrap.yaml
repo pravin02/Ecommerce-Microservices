@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: log-service
+  zipkin:
+    baseUrl:  http://127.0.0.1:9411/
 eureka:
   client:
     enabled: true

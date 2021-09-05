@@ -1,4 +1,5 @@
-log-service-url: http://localhost:8083/logs
+logService: log-service
+protocol: http
 
 zuul:
   ignoredServices: '*'
