@@ -4,12 +4,6 @@ server:
 spring:
   application:
     name: product-catalog-service
-  ##Config server is enabled
-  cloud:
-    config:
-      failFast: true
-      enabled: true
-      uri: http://localhost:8888/
 
 ## Configuring info endpoint
 info:

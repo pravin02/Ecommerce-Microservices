@@ -1,4 +1,14 @@
 ## for database properties have to connect with config server
+
+## for spring boot admin using config server
+
+## config server referred for config server itself
+
+## disabling eureka client
+eureka:
+  client:
+    enabled: false
+
 # Spring Boot Actuator
 management:
   endpoints:

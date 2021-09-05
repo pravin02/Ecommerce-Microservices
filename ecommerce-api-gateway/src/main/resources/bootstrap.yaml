@@ -4,7 +4,12 @@ server:
 spring:
   application:
     name: ecommerce-api-gateway
+  boot:
+    admin:
+      client:
+        url: http://localhost:8082
 
+## eureka properties already in config server but we are not connecting to it for specifically gateway
 eureka:
   client:
     enabled: true

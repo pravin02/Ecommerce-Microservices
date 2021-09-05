@@ -1,28 +1,18 @@
 server:
-  port: 8081
+  port: 8082
 
 spring:
   application:
     name: Spring-boot-admin
-  boot:
-    admin:
-      routes:
-        endpoints: env, metrics, trace, jolokia, info, configprops
-      client:
-        username: admin
-        password: admin
-        #instance:
-          #metadata:
-            #user:
-              #name: ${spring.security.user.name}
-              #password: ${spring.security.user.password}
-  #security:
-    #user:
-      #name: client
-      #password: client
+  cloud:
+    config:
+      failFast: true
+      enabled: false
+      uri: http://localhost:8888/
 
 eureka:
   client:
+    enabled: false
     serviceUrl:
       defaultZone: http://localhost:8082/eureka
       instance:

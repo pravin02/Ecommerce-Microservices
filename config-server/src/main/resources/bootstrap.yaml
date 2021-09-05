@@ -1,18 +1,19 @@
 server:
   port: ${port:8888}
 
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+      instance:
+        preferedIpAddress: true
+
 spring:
   application:
     name: ecommerce-config-service
-
-
-eureka:
-  client:
-    enabled: false
-    serviceUrl:
-      defaultZone: http://localhost:8081/eureka/
-    instance:
-      preferedIpAddress: true
 
 ## Configuring info endpoint
 info:

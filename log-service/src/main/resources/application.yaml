@@ -1,16 +1,8 @@
-spring:
-  jpa:
-    showSql: true
-    hibernate:
-      ddl-auto: update
-  datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ecommerce
-    username: ${DB_USER}
-    password: ${DB_PASS}
-  properties:
-    hibernate:
-      dialect: org.hibernate.dialect.MySQLDialect
+## for database properties have to connect with config server
+
+## for spring boot admin using config server
+
+## config server referred for config server itself
 
 management:
   endpoints:

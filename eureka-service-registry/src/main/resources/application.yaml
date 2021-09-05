@@ -1,11 +1,9 @@
+## for database properties have to connect with config server
+
+## for spring boot admin using config server
+
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-
-## Configuring info endpoint
-info:
-  appName: ${spring.application.name}
-  description: Eureka server for ecommrce application
-  version: 1.0.0

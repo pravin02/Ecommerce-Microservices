@@ -1,10 +1,13 @@
 server:
-  port: 8081
+  port: ${port:8081}
 
 spring:
   application:
     name: eureka-service-registry
-
+  boot:
+    admin:
+      client:
+        url: http://localhost:8082
 eureka:
   instance:
     hostname: localhost
@@ -16,3 +19,9 @@ eureka:
       defaultZone: http://localhost:8081/eureka/
       instance:
         preferedIpAddress: true
+
+## Configuring info endpoint
+info:
+  appName: ${spring.application.name}
+  description: Eureka server for ecommrce application
+  version: 1.0.0

@@ -1,3 +1,5 @@
+## for spring boot admin using config server
+
 spring:
   cloud:
     config:
