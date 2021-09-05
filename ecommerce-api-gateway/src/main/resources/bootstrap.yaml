@@ -1,30 +1,23 @@
 server:
-  port: 8081
+  port: 8080
 
 spring:
   application:
-    name: eureka-service-registry
+    name: ecommerce-api-gateway
 
 eureka:
-  instance:
-    hostname: localhost
   client:
     enabled: true
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
+      registryFetchIntervalSeconds: 5
       defaultZone: http://localhost:8081/eureka/
       instance:
         preferedIpAddress: true
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-
 ## Configuring info endpoint
 info:
   appName: ${spring.application.name}
-  description: Eureka server for ecommrce application
+  description: API Gateway for ecommerce application
   version: 1.0.0

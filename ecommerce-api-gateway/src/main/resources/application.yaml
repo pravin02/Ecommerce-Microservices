@@ -1,20 +1,4 @@
-server:
-  port: 8080
-
-spring:
-  application:
-    name: ecommerce-api-gateway
-
-eureka:
-  client:
-    enabled: true
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      registryFetchIntervalSeconds: 5
-      defaultZone: http://localhost:8081/eureka/
-      instance:
-        preferedIpAddress: true
+log-service-url: http://localhost:8083/logs
 
 zuul:
   ignoredServices: '*'
@@ -38,9 +22,3 @@ zuul:
       sensitiveHeaders: null
       serviceId: log-service
       stripPrefix: false
-
-## Configuring info endpoint
-info:
-  appName: ${spring.application.name}
-  description: API Gateway for ecommerce application
-  version: 1.0.0

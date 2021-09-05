@@ -1,0 +1,25 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: product-catalog-service
+  cloud:
+    config:
+      failFast: true
+      enabled: true
+      uri: http://localhost:8888/
+
+eureka:
+  client:
+    enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+      instance:
+        preferedIpAddress: true
+
+## Configuring info endpoint
+info:
+  appName: ${spring.application.name}
+  description: Spring Product Catalog Service Application
+  version: 1.0.0

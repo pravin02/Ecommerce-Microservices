@@ -1,0 +1,21 @@
+server:
+  port: ${port:8888}
+
+spring:
+  application:
+    name: ecommerce-config-service
+
+
+eureka:
+  client:
+    enabled: false
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+    instance:
+      preferedIpAddress: true
+
+## Configuring info endpoint
+info:
+  appName: ${spring.application.name}
+  description: Products service to serve products list for ecommerce
+  version: 1.0.0

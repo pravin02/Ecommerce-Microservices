@@ -1,0 +1,11 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+## Configuring info endpoint
+info:
+  appName: ${spring.application.name}
+  description: Eureka server for ecommrce application
+  version: 1.0.0
