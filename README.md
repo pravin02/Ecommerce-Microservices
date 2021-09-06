@@ -70,12 +70,11 @@ SonarQube accessible at http://localhost:9000/ and gradle command to do analysis
 ## Zipkin server:
 http://127.0.0.1:9411/
 
-
-
-
-
-
-
-
-
-
+## Upcoming improvements:
+1) Circuit Breaker - resilience4j
+2) Git Flow with github
+3) Junits & Integration tests
+4) Config Server Refresh Bus
+5) ELK stack (Elastic search, Log stash, Kibana)
+6) Jqassistance deps graph
+7) BDD & TDD
