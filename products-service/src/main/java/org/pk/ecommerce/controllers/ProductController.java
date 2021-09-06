@@ -19,10 +19,10 @@ public class ProductController {
     private ProductRepository productRepository;
 
     @GetMapping
-    public List<Product> productsList(@QueryParam("catalog") String catalog) {
-        if (catalog == null) {
+    public List<Product> productsList(@QueryParam("catalogId") Integer catalogId) {
+        if (catalogId == null) {
             return productRepository.findAll();
         }
-        return productRepository.findAllByCatalogId(Integer.parseInt(catalog));
+        return productRepository.findAllByCatalogId(catalogId);
     }
 }
