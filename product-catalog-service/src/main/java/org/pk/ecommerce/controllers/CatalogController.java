@@ -45,8 +45,8 @@ public class CatalogController {
         return this.message;
     }
 
-    @GetMapping("/{catalog}/products")
-    public ResponseEntity<?> getProductsByCatalogId(@PathVariable("catalog") String catalog) {
-        return ResponseEntity.ok(services.getProductsByCatalog(catalog));
+    @GetMapping("/{catalogId}/products")
+    public ResponseEntity<Object> getProductsByCatalogId(@PathVariable("catalogId") int catalogId) {
+        return ResponseEntity.ok(services.getProductsByCatalog(catalogId));
     }
 }
