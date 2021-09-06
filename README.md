@@ -43,17 +43,39 @@
 	            'de.codecentric:spring-boot-admin-starter-server'
                 'de.codecentric:spring-boot-admin-starter-client'	            
 
+## Plugin used
+	id "org.sonarqube" version "3.0"
+
 ## How to run:
     1) go to each project folder open terminal and hit ./gradlew build
+	2) ./gradlew clean build -x test
+	
 
 ## Digram:
 ![alt text](https://github.com/pravin02/Ecommerce-Microservices/blob/main/Eommerce_Microservice_architecture.png)
 
 ## Endpoints to Expose:
 1) localhost:8080/api/catalog
-2) localhost:8080/api/catalog/list
-3) localhost:8080/api/products
-4) localhost:8080/api/products/list
+2) localhost:8080/api/catalog/message
+3) localhost:8080/api/catalog/1/products
+4) localhost:8080/api/products
 
-## Endpoints to Expose:
+## Spring Boot Admin:
 Spring boot admin to monitor app services can be accessible using http://localhost:8081/applications
+
+## SonarQube integrated:
+SonarQube accessible at http://localhost:9000/ and gradle command to do analysis is
+./gradlew sonarqube -Dsonar.projectKey=ec-product-catalog-service -Dsonar.host.url=http://127.0.0.1:9000 -Dsonar.login=SONAR_KEY
+
+## Zipkin server:
+http://127.0.0.1:9411/
+
+
+
+
+
+
+
+
+
+
