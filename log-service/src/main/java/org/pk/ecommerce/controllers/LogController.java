@@ -1,5 +1,6 @@
 package org.pk.ecommerce.controllers;
 
+import org.pk.ecommerce.dtos.LogDto;
 import org.pk.ecommerce.entities.Log;
 import org.pk.ecommerce.repositories.LogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,8 @@ public class LogController {
     }
 
     @PostMapping
-    public String saveLog(@RequestBody Log log) {
+    public String saveLog(@RequestBody LogDto logDto) {
+        Log log = new Log(logDto);
         this.logRepository.save(log);
         return "Logs saved successfully";
     }
